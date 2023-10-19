@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> js is amazing </div>
+    <p> This is paragraph </p>
+    <a  id="mylink" href = "http://www.google.com"> Google </a>
+    <input type="button" id="myid" onclick="changeText();"/>
+    <br>
+    <script>
+      function changeText(){
+        var text =document.getElementsByTagName("div")
+        text[0].innerHTML ="Changing the content" ;
+        var mylink = document.getElementById("mylink")
+        mylink.href="http://www.facebook.com";
+        mylink.textContent="facebook";
+    //     var anchor =document.getElementsByTagName("a")
+    //   anchor[0].innerHTML ="http://amazon.com" ;
+      var inputElementType = document.getElementById("myid")
+          inputElementType.type= "text";
+         var inputTagType = document.getElementsByTagName("input")
+          for (let i = 0; i < inputTagType.length; i++) {
+            if(inputTagType[i].type === "button"){
+                inputTagType[i].type = "text";
+            }
+            
+            
+          }
+    
+          }   
+           </script>
+</body>
+</html>

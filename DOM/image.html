@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../wapProjet/imgFolder/Addis-Ababa-2022.png" alt="chrysanthumum">
+    <button onclick = "changeimage()">changeimg</button>
+    <script>
+        function changeimage(){
+            var image = document.getElementsByTagName("img")
+            for(let i=0; i<image.length;i++ ){
+            image[i].src="../wapProject/imgFolder/download.jpeg"
+            image[i].alt="nazret"
+        }
+    }
+    </script>
+</body>
+</html>
