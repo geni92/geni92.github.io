@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url(/secondProject/ani-image/backgroundimg.jpeg);
+    background-image: url(/wapdoc/secondProject/ani-image/backgroundimg.jpeg);
    background-position: center;
    background-size: cover;
    padding-left: 8%;
@@ -103,16 +103,16 @@ button{
 }
 .card1{
     
-    background-image: url(/secondProject/ani-image/italy.jpeg); 
+    background-image: url(/wapdoc/secondProject/ani-image/italy.jpeg); 
 }
 .card2{
-    background-image: url(/secondProject/ani-image/paris.png);
+    background-image: url(/wapdoc/secondProject/ani-image/paris.png);
 }
 .card3{
-    background-image: url(/secondProject/ani-image/madrid.jpeg);
+    background-image: url(/wapdoc/secondProject/ani-image/madrid.jpeg);
 }
 .card4{
-    background-image: url(/secondProject/ani-image/merakos_05_santorini-oia_1743x752.webp);
+    background-image: url(/wapdoc/secondProject/ani-image/merakos_05_santorini-oia_1743x752.webp);
 }
 .card:hover{
     transform: translateY(-10px);
