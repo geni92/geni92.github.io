@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     table{
+        border-collapse: collapse;
+        width:100%;
+    
+       
+     }
+     th,td{
+       
+        border:1px solid purple;
+        padding-top: 20px;
+        text-align: center;
+   
+     }
+    #tableid{
+        margin: 25px;
+    }
+     
+    </style>
+</head>
+<body>
+<script>
+     function createTable(){
+       if(document.getElementById("tableid"))
+        return;
+       
+        let tb1= document.createElement("table");
+        tb1.setAttribute("id","tableid")
+        let rw1=document.createElement("tr");
+        let rw2=document.createElement("tr");
+        let rw3=document.createElement("tr");
+      
+
+       let header1= document.createElement("th");
+       header1.innerHTML="header1";
+       let header2= document.createElement("th");
+       header2.innerHTML="header2";
+       let compro= document.createElement("td");
+       compro.innerHTML="compro"
+       let msd= document.createElement("td");
+       msd.innerHTML="msd"
+       let mpp=document.createElement("td");
+       mpp.innerHTML="mpp"
+       let wap=document.createElement("td");
+       wap.innerHTML="wap"
+       let wap1=document.createElement("td");
+       wap1.innerHTML="wap1"
+     
+        tb1.append(rw1,rw2,rw3);
+        rw1.append(header1,header2);
+        rw2.append(compro,msd);
+        rw3.append(mpp,wap);
+        rw2.before(wap1)
+
+        document.body.appendChild(tb1);
+     }
+    
+</script>
+
+    <input type="button" onclick="createTable();" value="createTable">
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        let fruits = ["apple", "pear", "banana", "mango"];
+        for (let ele of fruits) {
+          let myDiv = document.createElement("div");
+         
+        myDiv.innerHTML +=
+          "<label>" +
+          ele +
+          "</label>" +
+          ' <input type="checkbox" name=""' +
+          ele +
+          '"> ' +
+          "<br>" +
+          "<label>" +
+          ele +
+          "</label>" +
+          '<input type="checkbox" name=""' +
+          ele +
+          '"> ' +
+          "<br>" +
+          "<label>" +
+          ele +
+          "</label>" +
+          ' <input type="checkbox" name=""' +
+          ele +
+          '"> ' +
+          "<br>" +
+          "<label>" +
+          ele +
+          "</label>" +
+          '<input type="checkbox" name=""' +
+          ele +
+          '"> ' +
+          "<br>";
+          
+      document.body.append(myDiv);
+    }
+      }
+    </script>
+  </body>
+</html>

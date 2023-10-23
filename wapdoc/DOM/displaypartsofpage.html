@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   window.onload=function(){
+   let mydiv = document.createElement('div');
+   mydiv.innerHTML ='<label >scriptures</label>'+
+   ' <select id="myselect">'+ '<option value="vedas">vedas</option>' + '<option value="upanishads">upanishads</option>'+
+'</select>' + '<input type="button" onclick="show()" value="show"  />' +'<div id="checkbox"></div>'
++"<hr/>" + '<input type="submit" onclick="getvalue()" value="submit"/>';
+   
+document.body.append(mydiv);
+} 
+   function show(){
+   let myselect=document.querySelector('select').value
+   let mycheckbox=document.getElementById("checkbox")
+    mycheckbox.innerHTML=''
+    // let html;
+   if(myselect=="vedas"){
+    mycheckbox.innerHTML='<label> <input type="checkbox" value="checkbox" name="checkbox"/> rig</label>'+
+'<label> <input type="checkbox" value="checkbox" name="checkbox"/> hebi</label>'+
+'<label> <input type="checkbox" value="checkbox" name="checkbox"/> mekdi</label>'+
+'<label> <input type="checkbox" value="checkbox" name="checkbox"/>seli</label>'
+   }
+else if(myselect=="upanishads") {
+    mycheckbox.innerHTML='<label> <input type="checkbox" value="checkbox"/>java</label>'+
+'<label> <input type="checkbox" value="checkbox"/> python</label>'+
+'<label> <input type="checkbox" value="checkbox"/>script</label>'+
+'<label> <input type="checkbox" value="checkbox"/>c++</label>'
+
+
+}
+   }
+
+function getvalue(){
+    let selected =document.querySelectorAll("input:checked")
+    let mycheckbox =document.getElementById("checkbox")
+    mycheckbox.innerHTML=' '
+    for(let ele of selected)
+     mycheckbox.innerHTML+=ele.value
+}
+
+
+
+
+
+
+    
+   
+   
+</script>
+
+
+</body>
+</html>

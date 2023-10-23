@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> hi there</div>
+    <p>lord is my savor</p>
+    <input type="text"  value="yourname"/>
+    <input type="radio"  value="yourname"/>
+    <a href = "http://google.com" >Google</a>
+    <br>
+    <br>
+
+   <input type="button" onclick="changeText();" value="change Text"/>
+
+<script>
+
+   function changeText(){
+    var newDiv = document.querySelectorAll("div");
+     newDiv.innerHTML ="hello there";
+
+     var para =document.querySelector("p");
+     para.style.color="red";
+      
+      var apple = document.querySelector("a");
+      apple.href="http://www.apple.com";
+      apple.innerHTML="Apple";
+    
+     var inputType = document.querySelector("input[type=text]");
+      inputType.setAttribute("value", "fname");
+          var inputattribute= inputType.getAttribute("type");
+      console.log(inputattribute);
+        }        
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="radio" value="radio"/>hello 
+   <input type="radio" value="radio"/>hi
+   <input type="checkbox" value="checkbox"/>checkbox
+   <input type="button" value="uncheck" onclick="uncheck()"/>
+   <script>
+     function uncheck(){
+        let myinput= document.querySelectorAll("input");
+        for(let ele of myinput){
+            ele.checked =false;
+        }
+        // console.log("unchecked")
+        
+       
+     }
+   </script>
+</body>
+</html>

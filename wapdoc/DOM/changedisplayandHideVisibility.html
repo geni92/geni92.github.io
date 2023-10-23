@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div> display</div> 
+    <p id="myp">bananas are yellow</p>
+    <input type="submit" onclick="hidedisplay()" value="submit"/>
+    <div>visibility</div>
+    <input type="text" id="myinput"/>
+    <input type="submit" onclick="hidevisibility()" value="submit"/> 
+
+<script>
+     function hidedisplay(){
+         var myp=document.getElementById("myp")
+       myp.style.display=(myp.style.display=='none'?'':'none')
+     }
+     function hidevisibility(){
+        var myinput = document.getElementById("myinput")
+         myinput.style.visibility=(myinput.style.visibility=='visible' ? 'hidden':'visible');
+     }
+</script>
+   
+</body>
+</html>
