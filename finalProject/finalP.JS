@@ -39,7 +39,7 @@ function init() {
    
     
 
-    document.querySelector('.btncheck').addEventListener('click', function () {
+    document.querySelector('.check').addEventListener('click', function () {
         const guess = Number(document.querySelector('.guess').value);
         console.log(guess, typeof guess);
         console.log("secretNumber is " + secretNumber);
