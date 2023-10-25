@@ -1,37 +1,32 @@
+
 * {
-    /* border: solid 1px; i removed  */ 
     font-weight: lighter;
     font-family: "Press Start 2P", sans-serif;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: #adadad;
+    font-family: 'Monoton', cursive;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 header {
     background-color: #333;
-    /* background-color: #adadad;that looks better */
     text-align: center;
     padding: 20px;
 }
 
 h1 {
-     font-size: 43px;
-   
-    /* color: #fff;  */
-   
-   
-    /* position: absolute; 
-    width: 80%;
-    top: 90px;
-    left: 50%;
-    transform: translate(-50%,-50%); */
+    font-size: 43px;
+    color: #fff;
 }
 
 main {
-  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,16 +44,15 @@ main {
 }
 
 .number {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     border-radius: 20px;
-    border: white 6px solid;
+    border: #fff 6px solid;
     font-size: 6rem;
     width: 15rem;
     padding: 3rem 0rem;
     margin-bottom: 20px;
     transition: width 0.5s ease-in-out;
-    
 }
 
 .game-navigation {
@@ -71,7 +65,7 @@ main {
 }
 
 .message {
-    color: white;
+    color: #fff;
     padding: 5px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -87,6 +81,7 @@ main {
     cursor: pointer;
     margin-bottom: 10px;
     text-align: center;
+    border-radius: 8px;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -106,6 +101,8 @@ input[type="number"] {
     font-size: 16px;
     width: 70px;
     text-align: center;
+    border: none;
+    border-radius: 4px;
 }
 
 .guess-history {
@@ -125,4 +122,12 @@ input[type="number"] {
 
 .guess-history li {
     margin-bottom: 5px;
+}
+
+.sound-toggle {
+    display: none;
+}
+
+label {
+    display: inline-block;
 }
