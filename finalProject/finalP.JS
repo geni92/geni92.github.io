@@ -65,7 +65,7 @@ function init() {
                 highscore = score;
                 document.querySelector('.highscore').textContent = highscore;
             }
-            clearInterval(timer);
+           stopTimer();
             // When guess is wrong
         } else if (guess !== secretNumber) {
             if (score > 1) {
@@ -102,8 +102,9 @@ function init() {
         document.querySelector('body').style.backgroundColor = '#222';
         document.querySelector('.number').style.width = '15rem';
         document.querySelector('.guess').disabled = false;
-        stopTimer();
+       
         document.querySelector('.timer').innerHTML=20;
+        startTimer(20);
     });
    
 
