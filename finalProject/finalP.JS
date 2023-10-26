@@ -1,8 +1,16 @@
+function saveHighscoreToLocalStorage() {
+    localStorage.setItem('highscore', highscore);
+}
 
+
+function getHighscoreFromLocalStorage() {
+    const storedHighscore = localStorage.getItem('highscore');
+    return storedHighscore ? parseInt(storedHighscore) : 0;
+}
 function init() {
     let secretNumber = randomNum();
     let score = 20;
-    let highscore = 0;
+    let highscore = getHighscoreFromLocalStorage();;
     let timer; 
    
 
@@ -14,7 +22,7 @@ function init() {
     function randomNum (){
         return(Math.floor(Math.random() * 20) + 1);
     }
-    function startTimer() {  //added
+    function startTimer() {  
         let seconds = 20;
 
         function countdown() {
@@ -51,7 +59,7 @@ function init() {
         
         if (guess < 0 || guess > 20) {
             displayMessage('Invalid input. Please enter a number between 1 and 20.');
-            return;  // i added to limit our entry
+            return; 
             
        
               // When player wins
@@ -66,6 +74,7 @@ function init() {
             if (score > highscore) {
                 highscore = score;
                 document.querySelector('.highscore').textContent = highscore;
+                saveHighscoreToLocalStorage();
             }
            stopTimer();
             // When guess is wrong
@@ -84,7 +93,7 @@ function init() {
             incorrectSound.play();
         }
        
-        if (typeof guess === 'number' ) {
+        if (typeofguess === 'number' ) {
             const guessHistory = document.querySelector('.guess-history');
             const listItem = document.createElement('li');
             listItem.innerText = 'Guess #' + score + ': ' + guess;
@@ -111,21 +120,10 @@ function init() {
     });
    
 
-    document.querySelector('.sound-toggle').addEventListener('click', function() {
+    const soundToggle = document.querySelector('.sound-toggle');
+    soundToggle.addEventListener('click', function() {
         isSoundOn = !isSoundOn;
-        const bgMusic = document.getElementById('bg-music');
-        if (isSoundOn) {
-            bgMusic.play();
-        } else {
-            bgMusic.pause();
-        }
     });
-
-    const bgMusic = document.getElementById('bg-music');
-    bgMusic.volume = 0.2; 
-    bgMusic.play();
-    
-
 }
 
 

@@ -4,11 +4,20 @@
     font-family: "Press Start 2P", sans-serif;
 }
 
+.container{
+    background-color: #272626;
+    width: 90%;
+    max-width: 850px;
+    padding: 20px;
+    border: solid rgb(63, 63, 63) 1px;
+    border-radius: 20px;
+}
+
 body {
     margin: 0;
     font-family: 'Monoton', cursive;
-    background-color:rgb(27, 27, 27);
-    display: flex;
+    background-color: #222020;
+     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -16,18 +25,44 @@ body {
 }
 
 header {
-    border:5px solid goldenrod;
-    border-radius: 20px;
-    background-color:black;
+    margin: 5% 10%;
+    background-color: #000000;
+    color: #ffffff;
+    border: #fff solid 8px;
+    border-radius: 15px;
     text-align: center;
-    padding: 20px;
- 
+    padding: 50px;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 5px solid goldenrod;
 }
+
+.between {
+    margin-top: 10px;
+    color: goldenrod;
+}
+
+.game-navigation {
+    background-color: #000000;
+    color: #ffffff;
+    border: #fff solid 8px;
+    border-radius: 15px;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 5px solid goldenrod;
+}
+
 
 h1 {
     font-size: 43px;
-    color: #fff;
     color: goldenrod;
+   
+
 }
 
 main {
@@ -36,72 +71,94 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0px;
     color: goldenrod;
+
 }
 
 .top-label {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-size: 12px;
     color: #fff;
     padding: 5px;
-    
+}
+
+/* Wrong Animation */
+.wrongAnime {
+    position: relative;
+    animation-name: wrongAnimation;
+    animation-duration: .2s;
+}
+
+@keyframes wrongAnimation {
+    0% {
+        background-color: rgb(138, 0, 0);
+        left: 150px;
+    }
+    25% {
+        background-color: rgb(138, 0, 0);
+        left: -150px;
+    }
+    50% {
+        background-color:rgb(255, 0, 0);
+        left: 150px;
+    }
+    75% {
+        background-color:rgb(255, 0, 0);
+        left: -150px;
+    }
+
+    100% {
+        background-color: black;
+        left: 150px;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.label-highscore {
+    color: gold;
 }
 
 .number {
     background: #000;
-    color: #fff;
+    color:goldenrod;
     border-radius: 20px;
-    border:goldenrod 6px solid;
+    border:goldenrod solid;
     font-size: 6rem;
     width: 15rem;
     padding: 3rem 0rem;
     margin-bottom: 20px;
     transition: width 0.5s ease-in-out;
-    color: goldenrod;
 }
 
-.game-navigation {
-    background-color:black;
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    border: 5px solid goldenrod;
-    
-}
 
 .message {
-    color: #fff;
     padding: 5px;
     margin-bottom: 10px;
     font-size: 16px;
-    color: goldenrod;
-}
-.again{
-    color: goldenrod;
 }
 
 .btn {
     border: none;
-    background-color: #eee;
-    color: #222;
+    background-color:goldenrod;
+    color: #000000;
     font-size: 14px;
     font-family: inherit;
     padding: 10px 20px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 10px;
     text-align: center;
     border-radius: 8px;
     transition: background-color 0.3s ease-in-out;
-    color: goldenrod;
 }
 
 .btn:hover {
-    background-color: #ccc;
+    background-color:goldenrod;
 }
 
 .guess-input {
@@ -123,17 +180,15 @@ input[type="number"] {
 .guess-history {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px;
     text-align: left;
     max-height: 150px;
     overflow-y: auto;
     border: 1px solid #ccc;
-    background-color: #fff;
     padding: 10px;
     border-radius: 8px;
     width: 250px;
     margin-bottom: 20px;
-    color: goldenrod;
 }
 
 .guess-history li {
