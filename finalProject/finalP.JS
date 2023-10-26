@@ -77,6 +77,7 @@ function init() {
                 saveHighscoreToLocalStorage();
             }
            stopTimer();
+           document.querySelector('.game-display').classList.add('correct-guess');
             // When guess is wrong
         } else if (guess !== secretNumber) {
             if (score > 1) {

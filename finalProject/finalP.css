@@ -167,6 +167,10 @@ main {
     align-items: center;
     margin-bottom: 10px;
 }
+.correct-guess {
+    background-color: #60b347; /* Green color for correct guess */
+}
+
 
 input[type="number"] {
     padding: 8px;
