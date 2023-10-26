@@ -1,17 +1,4 @@
 
-function saveToLocalStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-}
-
-function getFromLocalStorage(key) {
-    const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : null;
-}
-
-
-
-
-
 function init() {
     let secretNumber = randomNum();
     let score = 20;
@@ -65,7 +52,7 @@ function init() {
         if (guess < 0 || guess > 20) {
             displayMessage('Invalid input. Please enter a number between 1 and 20.');
             return;  // i added to limit our entry
-            saveToLocalStorage('highscore', highscore); 
+            
        
               // When player wins
          } 
@@ -120,7 +107,7 @@ function init() {
        
         document.querySelector('.timer').innerHTML=20;
         startTimer(20);
-        saveToLocalStorage('highscore', 0);
+       
     });
    
 
