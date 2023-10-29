@@ -1,16 +1,8 @@
-function saveHighscoreToLocalStorage() {
-    localStorage.setItem('highscore', highscore.value);
-}
 
-
-function getHighscoreFromLocalStorage() {
-    const storedHighscore = localStorage.getItem('highscore');
-    return storedHighscore ? parseInt(storedHighscore) : 0;
-}
 function init() {
     let secretNumber = randomNum();
     let score = 20;
-    let highscore = saveHighscoreToLocalStorage();
+    let highscore = 0;
     let timer; 
    
 
@@ -74,7 +66,7 @@ function init() {
             if (score > highscore) {
                 highscore = score;
                 document.querySelector('.highscore').textContent = highscore;
-                saveHighscoreToLocalStorage();
+               
             }
            stopTimer();
            document.querySelector('.game-display').classList.add('correct-guess');
