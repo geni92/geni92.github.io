@@ -1,5 +1,5 @@
 function saveHighscoreToLocalStorage() {
-    localStorage.setItem('highscore', highscore);
+    localStorage.setItem('highscore', highscore.value);
 }
 
 
@@ -10,7 +10,7 @@ function getHighscoreFromLocalStorage() {
 function init() {
     let secretNumber = randomNum();
     let score = 20;
-    let highscore = getHighscoreFromLocalStorage();;
+    let highscore = saveHighscoreToLocalStorage();
     let timer; 
    
 
@@ -94,7 +94,7 @@ function init() {
             incorrectSound.play();
         }
        
-        if (typeofguess === 'number' ) {
+        if (typeof guess === 'number' ) {
             const guessHistory = document.querySelector('.guess-history');
             const listItem = document.createElement('li');
             listItem.innerText = 'Guess #' + score + ': ' + guess;
